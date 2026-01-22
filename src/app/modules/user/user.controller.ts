@@ -83,7 +83,7 @@ const createDoctor = catchAsync(async (req: Request, res: Response) => {
     const payload = {
         data: parsedData,
         doctor: {
-            ...parsedData.admin,
+            ...parsedData.doctor,
             profilePhoto: req.file?.path
         }
     };

@@ -106,10 +106,8 @@ const getAllUser = async (
 };
 
 const createDoctor = async (payload) => {
-
-
-    console.log("payload insdie the service ", payload.data.doctor);
-    console.log("payload insdie the service ", payload.doctor);
+    // console.log("payload insdie the service ", payload.data.doctor);
+    // console.log("payload insdie the service ", payload.doctor);
 
     const hashedPassword: string = await bcrypt.hash(payload.data.password as string, 10);
     console.log('hashed password --->', hashedPassword);
