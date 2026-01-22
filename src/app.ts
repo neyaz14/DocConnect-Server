@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req: Request, res: Response) => {
     res.send({
         message: "Server is running..",
-        environment: envVars.node_env,
+        environment: envVars.NODE_ENV,
         uptime: process.uptime().toFixed(2) + " sec",
         timeStamp: new Date().toISOString()
     })
