@@ -10,7 +10,7 @@ const inserIntoDB = catchAsync(async (req: Request, res: Response) => {
     console.log('req body ===>',JSON.parse(req.body.data));
     const paylaod ={
         ...JSON.parse(req.body.data),
-        icon : req?.file.path 
+        icon : req?.file?.path 
     };
     console.log('payload body ===>',paylaod);
     // req.body = SpecialtiesValidtaion.create.parse(JSON.parse(req.body.data))
