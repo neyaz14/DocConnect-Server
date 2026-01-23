@@ -12,3 +12,4 @@ router.patch(
     DoctorController.updateIntoDB
 )
 export const DoctorRoutes = router;
+
