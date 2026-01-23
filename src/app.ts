@@ -1,6 +1,6 @@
 import express, { Application, NextFunction, Request, Response } from 'express';
 import cors from 'cors';
-import globalErrorHandler from './app/middlewares/globalErrorHandler';
+import globalErrorHandler from './app/errorHelpers/globalErrorHandler';
 import notFound from './app/middlewares/notFound';
 import { envVars } from './config/envVars';
 import { uptime } from 'process';

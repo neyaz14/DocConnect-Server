@@ -1,6 +1,6 @@
 import dotenv from "dotenv"
 import path from "path"
-import AppError from "../helpers/errorHelpers"
+import AppError from "../app/errorHelpers/errorHelpers"
 
 dotenv.config({ path: path.join(process.cwd(), ".env") })
 

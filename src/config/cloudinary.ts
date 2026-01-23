@@ -4,7 +4,7 @@
 
 import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
 import stream from "stream";
-import AppError from "../helpers/errorHelpers";
+import AppError from "../app/errorHelpers/errorHelpers";
 import { envVars } from "./envVars";
 
 // Amader folder -> image -> form data -> File -> Multer -> Amader project / pc te Nijer ekta folder(temporary) -> Req.file

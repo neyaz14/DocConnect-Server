@@ -2,7 +2,7 @@ import { UserStatus } from "@prisma/client"
 import { prisma } from "../../shared/prisma"
 import bcrypt from "bcryptjs";
 
-import AppError from "../../../helpers/errorHelpers";
+import AppError from "../../errorHelpers/errorHelpers";
 import { generateToken } from "../../utils/jwt";
 import { envVars } from "../../../config/envVars";
 

@@ -85,7 +85,8 @@ model Doctor {
   user                User     @relation(fields: [email], references: [email])
 
   doctorSchedules DoctorSchedules[]
-  //   @@schema("auth") // এই line টা যোগ করুন
+
+  doctorSpecialties DoctorSpecialties[]
 
   @@map("doctors")
 }
@@ -133,3 +134,22 @@ model DoctorSchedules {
   @@map("doctor_Schedules")
 }
 
+model Specialties {
+  id                String              @id @default(uuid())
+  title             String
+  icon              String
+  doctorSpecialties DoctorSpecialties[]
+
+  @@map("specialties")
+}
+
+model DoctorSpecialties {
+  specialitiesId String
+  specialities   Specialties @relation(fields: [specialitiesId], references: [id])
+
+  doctorId String
+  doctor   Doctor @relation(fields: [doctorId], references: [id])
+
+  @@id([specialitiesId, doctorId])
+  @@map("doctor_specialties")
+}

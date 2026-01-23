@@ -4,7 +4,7 @@ import { prisma } from "../../shared/prisma";
 import { ICreatePatientUserPayload, IPatientCreatePayload, UserFilterParams } from "./user.interface";
 import pick from "../../utils/pick";
 import { IOptions, paginationHelper } from "../../utils/paginationHelpers";
-import AppError from "../../../helpers/errorHelpers";
+import AppError from "../../errorHelpers/errorHelpers";
 import { allowedSortFields, userSearchAbleFields } from "./user.constant";
 import { Admin, Doctor, Prisma, UserRole } from "@prisma/client";
 

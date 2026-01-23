@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import AppError from "../../helpers/errorHelpers";
+import AppError from "../errorHelpers/errorHelpers";
 import { verifyToken } from "../utils/jwt";
 import { envVars } from "../../config/envVars";
 import { JwtPayload } from "jsonwebtoken";

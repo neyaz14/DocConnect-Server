@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { ZodObject } from "zod"
-import AppError from "../../helpers/errorHelpers";
+import AppError from "../errorHelpers/errorHelpers";
 
 export const zodValidationRequest = (zodschema: ZodObject) => async (req: Request, res: Response, next: NextFunction) => {
     try {
