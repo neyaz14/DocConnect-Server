@@ -3,6 +3,7 @@ import { userRouter } from '../modules/user/user.router';
 import { authRoutes } from '../modules/auth/auth.routes';
 import { ScheduleRoutes } from '../modules/schedule/sch.router';
 import { doctorScheduleRoutes } from '../modules/doctorSchedule/docSch.router';
+import { SpecialtiesRoutes } from '../modules/specialties/special.router';
 
 
 export const router = Router();
@@ -23,6 +24,10 @@ const moduleRoutes = [
     {
         path: '/doctor-schedule',
         route: doctorScheduleRoutes
+    },
+    {
+         path: '/specialties',
+        route: SpecialtiesRoutes
     }
 ];
 
