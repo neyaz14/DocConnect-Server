@@ -11,5 +11,18 @@ router.patch(
     "/:id",
     DoctorController.updateIntoDB
 )
+router.post(
+    "/suggestion",
+    DoctorController.getAiSuggestion
+)
+
+
+
+
+
+
+
+
 export const DoctorRoutes = router;
 
+ 

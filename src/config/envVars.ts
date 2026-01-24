@@ -23,7 +23,8 @@ interface EnvConfigVars {
     CLOUDINARY_CLOUD_NAME: string
     CLOUDINARY_API_KEY: string
     CLOUDINARY_API_SECRET: string
-  }
+  },
+  OPENROUTER_API_KEY:  string
 }
 
 /**
@@ -45,6 +46,8 @@ const loadVariables = (): EnvConfigVars => {
     "CLOUDINARY_CLOUD_NAME",
     "CLOUDINARY_API_KEY",
     "CLOUDINARY_API_SECRET",
+
+    "OPENROUTER_API_KEY"
   ]
 
   requiredEnvVariables.forEach((key) => {
@@ -70,6 +73,8 @@ const loadVariables = (): EnvConfigVars => {
       CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY as string,
       CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET as string,
     },
+    OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY as string,
+
   }
 }
 
