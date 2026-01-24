@@ -7,6 +7,7 @@ import { IOptions, paginationHelper } from "../../utils/paginationHelpers";
 import AppError from "../../errorHelpers/errorHelpers";
 import axios, { Axios, AxiosError } from "axios";
 import openai from "../../../config/openRouter";
+import { extractJsonFromMessage } from "../../utils/extractJsonFromMessage";
 // import openRouter from "../../../config/openRouter";
 
 const getAllFromDB = async (filters: any, options: IOptions) => {
@@ -205,22 +206,12 @@ Response style:
         ],
     });
 
-    // const result = await extractJsonFromMessage(completion.choices[0].message)
+    const result = await extractJsonFromMessage(completion.choices[0].message)
 
     console.log(completion.choices[0].message, "final response get");
 
 
-
-
-
-
-
-
-
-
-
-
-    return (completion.choices[0].message);
+    return result;
 
 }
 
