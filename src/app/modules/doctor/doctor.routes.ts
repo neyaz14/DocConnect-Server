@@ -16,7 +16,7 @@ router.post(
     DoctorController.getAiSuggestion
 )
 
-
+router.get('/:id', DoctorController.getByIdFromDB);
 
 
 
