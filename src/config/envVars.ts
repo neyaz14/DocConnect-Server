@@ -24,7 +24,11 @@ interface EnvConfigVars {
     CLOUDINARY_API_KEY: string
     CLOUDINARY_API_SECRET: string
   },
-  OPENROUTER_API_KEY:  string
+  OPENROUTER_API_KEY: string,
+  STRIPE: {
+    STRIPE_PUBLISHER_KEY: string,
+    STRIPE_SECRECT_KEY: string
+  }
 }
 
 /**
@@ -47,12 +51,14 @@ const loadVariables = (): EnvConfigVars => {
     "CLOUDINARY_API_KEY",
     "CLOUDINARY_API_SECRET",
 
-    "OPENROUTER_API_KEY"
+    "OPENROUTER_API_KEY",
+    "STRIPE_PUBLISHER_KEY",
+    "STRIPE_SECRECT_KEY"
   ]
 
   requiredEnvVariables.forEach((key) => {
     if (!process.env[key]) {
-      throw new AppError(401,`❌ Missing required environment variable: ${key}`)
+      throw new AppError(401, `❌ Missing required environment variable: ${key}`)
     }
   })
 
@@ -74,6 +80,10 @@ const loadVariables = (): EnvConfigVars => {
       CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET as string,
     },
     OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY as string,
+    STRIPE: {
+      STRIPE_PUBLISHER_KEY: process.env.STRIPE_PUBLISHER_KEY as string,
+      STRIPE_SECRECT_KEY: process.env.STRIPE_SECRECT_KEY as string
+    }
 
   }
 }
